@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
+
+import { cliente } from '../cliente';
+
 @Component({
-  selector: 'app-add',
+  selector: 'cliente-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  public cliente:cliente;
+
+  constructor() { 
+    this.cliente=new cliente ();
+  }
+
 
   ngOnInit() {
   }

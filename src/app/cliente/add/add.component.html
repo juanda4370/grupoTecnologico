@@ -1,3 +1,56 @@
-<p>
-  add works!
-</p>
+
+
+<form #addform="ngForm">
+  AGREGAR CLIENTE
+  <table>
+    <tr>
+      <td>
+          <md-form-field>
+              <input required mdInput placeholder="cedula" [(ngModel)]="cliente.cedula" name="cedula" #cedula="ngModel">
+              <md-error>
+                Por Favor Ingrese una cedula Valido
+              </md-error>
+            </md-form-field>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="nombre" [(ngModel)]="cliente.nombre" name="nombre" #nombre="ngModel">
+                <md-error>
+                  Por Favor Ingrese un Nombre Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+    <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="telefono" [(ngModel)]="cliente.telefono" name="telefono" #telefono="ngModel">
+                <md-error>
+                  Por Favor Ingrese un Telefono Valido
+                </md-error>
+              </md-form-field>
+        </td>
+    </tr>
+    <tr>
+      <td>
+          <md-form-field>
+              <input required mdInput placeholder="email" [(ngModel)]="cliente.email" name="email" #email="ngModel">
+              <md-error>
+                Por Favor Ingrese un email Valido
+              </md-error>
+            </md-form-field>
+      </td>
+  </tr>
+             <tr>
+              <td>
+                  <div class="button-row">
+                      <button [disabled]="!addform.valid" md-raised-button color="accent" (click)="onSaveClick()">Guardar</button>
+                      <button md-raised-button color="accent" (click)="onNewClick()">Nuevo Registro</button>
+                  </div>
+                    
+             </td>
+              </tr>
+  </table>
+</form>-->
