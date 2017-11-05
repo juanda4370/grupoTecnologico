@@ -49,7 +49,7 @@ import {
   MdToolbarModule,
   MdTooltipModule,
   
-  } from '@angular/material';
+ } from '@angular/material';
 
 
 
@@ -106,8 +106,7 @@ const appRoutes: Routes = [
     MdToolbarModule,
     MdTooltipModule,
    
- 
-  RouterModule.forRoot(
+     RouterModule.forRoot(
     appRoutes
   )
   ],
