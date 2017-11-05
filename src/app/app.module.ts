@@ -9,7 +9,7 @@ import { ProveedorModule} from './proveedor/proveedor.module';
 import {RouterModule,Routes}from '@angular/router';
 
 import { IndexComponent} from './cliente/index/index.component';
-import { IndexComponent as productoaddcomponent} from './producto/index/index.component';
+import { AddComponent as productoaddcomponent} from './producto/add/add.component';
 import { IndexComponent as proveedoraddcomponent} from './proveedor/index/index.component';
 
 import { AppComponent } from './app.component';
@@ -17,46 +17,44 @@ import { MenuComponent } from './menu/menu.component';
 import { CurrentOptionComponent } from './current-option/current-option.component';
 
 import {
-  MdAutocompleteModule, 
-  MdButtonModule,
-  MdButtonToggleModule,
-  MdCardModule,
-  MdCheckboxModule,
-  MdChipsModule,
-  //MdCoreModule,
-  MdDatepickerModule,
-  MdDialogModule,
-  MdExpansionModule,
-  MdGridListModule,
-  MdIconModule,
-  MdInputModule, 
-  MdListModule,
-  MdMenuModule,
-  MdNativeDateModule,
-  MdPaginatorModule,
-  MdProgressBarModule,
-  MdProgressSpinnerModule,
-  MdRadioModule,
-  MdRippleModule,
-  MdSelectModule,
-  MdSidenavModule,
-  MdSliderModule,
-  MdSlideToggleModule,
-  MdSnackBarModule, 
-  MdSortModule, 
-  MdTableModule,
-  MdTabsModule,
-  MdToolbarModule,
-  MdTooltipModule,
-  
- } from '@angular/material';
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule } from '@angular/material';
 
 
 
 const appRoutes: Routes = [
   {path:  'cliente/index',component: IndexComponent},
-  {path:  'producto/index',component: productoaddcomponent},
-  {path:  'proveedor/index',component: proveedoraddcomponent},
+  {path:  'producto/add',component: productoaddcomponent},
+ {path:  'proveedor/index',component: proveedoraddcomponent},
  
 ]
 
@@ -73,42 +71,44 @@ const appRoutes: Routes = [
     ClienteModule,
     ProductoModule,
     ProveedorModule,
-    BrowserAnimationsModule,
-    MdAutocompleteModule, 
-    MdButtonModule,
-    MdButtonToggleModule,
-    MdCardModule,
-    MdCheckboxModule,
-    MdChipsModule,
-    //MdCoreModule,
-    MdDatepickerModule,
-    MdDialogModule,
-    MdExpansionModule,
-    MdGridListModule,
-    MdIconModule,
-    MdInputModule, 
-    MdListModule,
-    MdMenuModule,
-    MdNativeDateModule,
-    MdPaginatorModule,
-    MdProgressBarModule,
-    MdProgressSpinnerModule,
-    MdRadioModule,
-    MdRippleModule,
-    MdSelectModule,
-    MdSidenavModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdSnackBarModule, 
-    MdSortModule, 
-    MdTableModule,
-    MdTabsModule,
-    MdToolbarModule,
-    MdTooltipModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatStepperModule,
+  BrowserAnimationsModule,
+    
    
-     RouterModule.forRoot(
+    RouterModule.forRoot(
     appRoutes
-  )
+    )
+
   ],
   providers: [],
   bootstrap: [AppComponent]
