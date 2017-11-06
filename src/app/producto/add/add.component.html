@@ -1,3 +1,36 @@
-<p>
-  add works!
-</p>
+<form #addform="ngForm">
+    AGREGAR PRODUCTO
+    <table>
+      <tbody>
+      <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="codigo" [(ngModel)]="producto.codigo" name="codigo" #codigo="ngModel">
+                <md-error *ngIf="!codigo.valid || !codigo.pristine">
+                  Por Favor Ingrese un codigo Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input required mdInput placeholder="tipo" [(ngModel)]="producto.tipo" name="tipo" #tipo="ngModel">
+                  <md-error *ngIf="!tipo.valid || !tipo.pristine">
+                    Por Favor Ingrese un tipo Valido
+                  </md-error>
+                </md-form-field>
+          </td>
+        </tr>         
+        <tr>
+                <td>
+                    <div class="button-row">
+                        <button [disabled]= "addForm.valid" mat-raised-button color="accent"(Click)="onSaveClick()">Guardar</button>        
+                        <button mat-raised-button color="accent"(Click)="onNewClick()">nuevo registro</button>
+                    </div>
+                      
+               </td>
+                </tr>
+      </tbody>
+    </table>
+  </form>

@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { producto} from '../producto';
+import { ProductoService } from '../producto-service.service';
 
 @Component({
-  selector: 'app-add',
+  selector: 'producto-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
-
+  
+ producto:producto; 
+ 
+ 
+  constructor(private productoService:ProductoService) { }
+   
   ngOnInit() {
+    this.producto = new producto ();
   }
-
+ onNewClick(){
+   this.producto = new producto();
+ }
+ onSaveClick() {
+   this.productoService.clienteList.push(this.producto);
+ }
+ 
+  
+ 
 }
