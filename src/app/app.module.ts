@@ -52,9 +52,9 @@ import {
 
 
 const appRoutes: Routes = [
-  {path:  'cliente/index',component: IndexComponent},
-  {path:  'producto/add',component: productoaddcomponent},
- {path:  'proveedor/index',component: proveedoraddcomponent},
+  {path:  "cliente/index",component: IndexComponent},
+  {path:  "producto/index",component: productoaddcomponent},
+ {path:  "proveedor/index",component: proveedoraddcomponent},
  
 ]
 

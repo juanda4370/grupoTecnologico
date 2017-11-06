@@ -4,7 +4,7 @@ import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { IndexComponent } from './index/index.component';
 import { FormsModule } from '@angular/forms';
-import { ProveedorService } from "./proveedor-service.service";
+import { ProveedorService } from './proveedor-service.service';
 
 
 import {
