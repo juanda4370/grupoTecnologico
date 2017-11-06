@@ -24,7 +24,7 @@ export class AddComponent implements OnInit {
  onSaveClick() {
    this.clienteService.clienteList.push(this.cliente);
  }
- {
-   alert ("se ha guardado el cliente: " + this.cliente.nombre);
- }
+ 
+  
+ 
 }
