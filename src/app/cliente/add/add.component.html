@@ -46,7 +46,7 @@
              <tr>
               <td>
                   <div class="button-row">
-                      <button mat-raised-button color="accent"(Click)="onSaveClick()">save</button>        
+                      <button [disable]= "addForm.valid" mat-raised-button color="accent"(Click)="onSaveClick()">save</button>        
                       <button mat-raised-button color="accent"(Click)="onNewClick()">nuevo registro</button>
                   </div>
                     
