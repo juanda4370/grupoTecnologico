@@ -22,7 +22,7 @@ export class AddComponent implements OnInit {
    this.producto = new producto();
  }
  onSaveClick() {
-   this.productoService.clienteList.push(this.producto);
+   this.productoService.productoList.push(this.producto);
  }
  
   

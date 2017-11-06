@@ -1,3 +1,12 @@
-<p>
-  list works!
-</p>
+<table  border="1">
+    <tr>
+      <td>nombre</td>
+      <td>ciudad</td>
+     
+  </tr>
+  <tr *ngFor="let proveedor of productoService.productoList"> 
+      <td>{{proveedor.nombre}}</td>
+      <td>{{proveedor.ciudad}}</td>
+     
+  </tr>
+  </table>

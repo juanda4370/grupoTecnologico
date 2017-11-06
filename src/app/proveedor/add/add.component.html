@@ -1,3 +1,36 @@
-<p>
-  add works!
-</p>
+<form #addform="ngForm">
+    AGREGAR PROVEEDOR
+    <table>
+      <tbody>
+      <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="nombre" [(ngModel)]="proveedor.nombre" name="nombre" #nombre="ngModel">
+                <md-error *ngIf="!nombre.valid || !nombre.pristine">
+                  Por Favor Ingrese un nombre Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input required mdInput placeholder="ciudad" [(ngModel)]="proveedor.ciudad" name="ciudad" #ciudad="ngModel">
+                  <md-error *ngIf="!ciudad.valid || !ciudad.pristine">
+                    Por Favor Ingrese una ciudad Valida
+                  </md-error>
+                </md-form-field>
+          </td>
+        </tr>         
+        <tr>
+                <td>
+                    <div class="button-row">
+                        <button [disabled]= "addForm.valid" mat-raised-button color="accent"(Click)="onSaveClick()">Guardar</button>        
+                        <button mat-raised-button color="accent"(Click)="onNewClick()">nuevo registro</button>
+                    </div>
+                      
+               </td>
+                </tr>
+      </tbody>
+    </table>
+  </form>
