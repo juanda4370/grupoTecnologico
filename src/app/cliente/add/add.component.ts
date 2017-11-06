@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import { cliente } from '../cliente';
+import { ClienteService } from '../cliente-service.service';
 
 @Component({
   selector: 'cliente-add',
@@ -10,14 +9,22 @@ import { cliente } from '../cliente';
 })
 export class AddComponent implements OnInit {
 
-  public cliente:cliente;
-
-  constructor() { 
-    this.cliente=new cliente ();
-  }
-
-
+  
+ cliente:cliente; 
+ 
+ 
+  constructor(private clienteService:ClienteService) { }
+   
   ngOnInit() {
+    this.cliente = new cliente ();
   }
-
+ onNewClick(){
+   this.cliente = new cliente();
+ }
+ onSaveClick() {
+   this.clienteService.clienteList.push(this.cliente);
+ }
+ {
+   alert ("se ha guardado el cliente: " + this.cliente.nombre);
+ }
 }
