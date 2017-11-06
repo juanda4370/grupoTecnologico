@@ -1,13 +1,16 @@
 <div>
-        <button mat-button [matMenuTriggerFor]="menu">
+  
+    <button mat-button [matMenuTriggerFor]="menu">
+      
+
+    <mat-icon class="mat-24" aria-label="menu principal"><i class="material-icons">list</i></mat-icon>
     
-        <mat-icon class="mat-24" aria-label="menu principal"><i class="material-icons">exit_to_app</i></mat-icon>
-      </button> 
-         <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="cliente/index">cliente </button>
-        <button mat-menu-item routerLink="producto/add">producto </button>
-        <button mat-menu-item routerLink="proveedor/add">proveedor </button>
-       </mat-menu>
-       </div>
-       
-    
+  </button> 
+     <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="cliente/index">cliente </button>
+    <button mat-menu-item routerLink="producto/add">producto </button>
+    <button mat-menu-item routerLink="proveedor/add">proveedor </button>
+   </mat-menu>
+   </div>
+   
+  
